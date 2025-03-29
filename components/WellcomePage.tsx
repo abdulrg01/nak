@@ -7,7 +7,7 @@ export default function WelcomePage() {
       {/* Left sidebar with vertical text */}
       <div className="w-full md:w-[200px] md:flex flex-col items-center p-8 hidden ">
         <div className="flex flex-row items-start">
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col">
             <span className="text-[#002b5c] text-5xl font-bold tracking-wider">
               A
             </span>
@@ -65,7 +65,7 @@ export default function WelcomePage() {
 
       {/* Right content section */}
       <div className="w-full md:flex-1 p-8">
-        <div className="max-w-2xl space-y-10">
+        <div className="max-w-2xl space-y-10 border-t-2 border-[#4ba3c3] pt-5">
           <p className="text-[#002b5c] text-sm">
             We have been welcoming international students for over 100 years and
             with so many educational pathways to choose from, there is no better

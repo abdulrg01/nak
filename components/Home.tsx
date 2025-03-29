@@ -1,12 +1,8 @@
 "use client";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ChevronRight } from "lucide-react";
-import { InfiniteSlider } from "./ui/infinite-slider";
-import { ProgressiveBlur } from "./ui/progressive-blur";
 import Image from "next/image";
-import { ChevronDown, Plus } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function HeroSection() {
