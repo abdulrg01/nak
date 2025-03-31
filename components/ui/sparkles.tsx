@@ -81,7 +81,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                   mode: "repulse",
                 },
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                resize: true as any, 
+                resize: true as any,
               },
               modes: {
                 push: {
