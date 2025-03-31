@@ -461,7 +461,7 @@ export default function Home() {
                   Get in Touch
                 </h2>
                 <p className="text-muted-foreground md:text-lg">
-                  We're here to answer your questions and help you learn more
+                  We&apos;re here to answer your questions and help you learn more
                   about our school.
                 </p>
                 <div className="space-y-4 mt-6">
