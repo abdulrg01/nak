@@ -190,17 +190,17 @@ export default function Clara() {
           </motion.h2>
 
           <motion.h1
-            className="text-white text-4xl md:text-5xl font-light mb-4 leading-tight"
+            className="text-white text-sm font-light mb-4 leading-tight"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
             Empowering Communities <br />
-            <span className="font-bold">Transforming Lives</span>
+            <span className="font-bold text-4xl md:text-5xl">Transforming Lives</span>
           </motion.h1>
 
           <motion.p
-            className="text-white/80 text-lg md:text-xl mb-8"
+            className="text-white/80 text-sm mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.8 }}
