@@ -12,7 +12,7 @@ export const slides = [
     subtitle: "Dive into beautifully crafted virtual landscapes.",
   },
   {
-    image: "/nak.jpg",
+    image: "/clara.png",
     title: "Capturing love",
     subtitle: "Stay tuned for our next big release.",
   },
