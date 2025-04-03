@@ -98,7 +98,7 @@ export default function HomeHero() {
       <div>
         {/* Mobile Menu Button */}
         <button
-          className="text-white absolute top-7 left-4 z-40"
+          className="text-white absolute top-7 left-4 z-50"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -113,53 +113,48 @@ export default function HomeHero() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="flex items-start gap-40 md:gap-96">
-                <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-                  {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                </button>
-                <div className="flex flex-col space-y-6 pt-20 items-center">
-                  <Link
-                    href="/clara"
-                    className="text-[#d4af37] text-xl font-medium"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Home
-                  </Link>
-                  <Link
-                    href="#about"
-                    className="text-white text-xl font-medium"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Biography
-                  </Link>
-                  <Link
-                    href="#initiatives"
-                    className="text-white text-xl font-medium"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Initiatives
-                  </Link>
-                  <Link
-                    href="#gallery"
-                    className="text-white text-xl font-medium"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Gallery
-                  </Link>
-                  <Link
-                    href="#contact"
-                    className="text-white text-xl font-medium"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Contact
-                  </Link>
-                </div>
+              <div className="flex flex-col space-y-6 pt-20 items-center">
+                <Link
+                  href="/clara"
+                  className="text-[#d4af37] text-xl font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Home
+                </Link>
+                <Link
+                  href="#about"
+                  className="text-white text-xl font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Biography
+                </Link>
+                <Link
+                  href="#initiatives"
+                  className="text-white text-xl font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Initiatives
+                </Link>
+                <Link
+                  href="#gallery"
+                  className="text-white text-xl font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Gallery
+                </Link>
+                <Link
+                  href="#contact"
+                  className="text-white text-xl font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Contact
+                </Link>
               </div>
             </motion.div>
           </>
         )}
       </div>
-      <div className="fixed top-7 z-50 inset-0">
+      <div className="fixed top-7 z-40 inset-0">
         <h1 className="text-xl flex items-center justify-center text-white md:text-3xl font-light tracking-wide font-serif">
           Ciroma Clara
         </h1>
