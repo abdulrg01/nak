@@ -9,7 +9,7 @@ import {
   Lightbulb,
   Globe,
 } from "lucide-react";
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "../ahma/SectionTitle";
 
 export default function InitiativesSection() {
   const initiatives = [

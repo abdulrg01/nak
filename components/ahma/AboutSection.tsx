@@ -3,13 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import SectionTitle from "../ahma/SectionTitle";
+import SectionTitle from "./SectionTitle";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="ahmaabout" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <SectionTitle title="About Me" subtitle="My Journey & Vision" />
+        <SectionTitle title="About" subtitle="My Journey & Vision" />
 
         <div className="bg-white rounded-xl shadow-2xl overflow-hidden">
           <div className="grid md:grid-cols-2">
@@ -32,11 +32,15 @@ export default function AboutSection() {
               className="relative h-[500px] md:h-auto"
             >
               <Image
-                src="/ahma.jpg"
-                alt="Ahmad picture"
+                src="/ahma2.png"
+                alt="ahamad"
                 fill
                 className="object-cover"
               />
+              <div className="absolute bottom-20 left-10">
+                <p className="text-lg lg:text-xl text-white md:text-3xl font-light tracking-wide font-serif border-b border-white pb-2">About</p>
+                <h1 className="mt-4 text-4xl text-white md:text-5xl font-light tracking-wide font-serif">The King</h1>
+              </div>
             </motion.div>
 
             <div className="p-8 md:p-12 bg-white text-[#1e2132]">
@@ -84,9 +88,9 @@ export default function AboutSection() {
                 <h3 className="text-xl font-bold mb-4">Key Initiatives:</h3>
                 <ul className="space-y-3">
                   {[
-                    "Educational scholarships for young women",
+                    "Educational scholarships for young men",
                     "Rural healthcare accessibility programs",
-                    "Women's economic empowerment initiatives",
+                    "Economic empowerment initiatives",
                     "Clean water projects in underserved communities",
                     "Youth leadership development programs",
                     "Cultural heritage preservation",

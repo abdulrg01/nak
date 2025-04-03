@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Award, BookOpen, Heart, Globe, Users } from "lucide-react";
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "../ahma/SectionTitle";
 
 export default function BiographySection() {
   const timelineItems = [

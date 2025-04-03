@@ -3,42 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import SectionTitle from "../ahma/SectionTitle";
 
-export default function AboutSection() {
+export default function AboutHer() {
   return (
     <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <SectionTitle title="About Me" subtitle="My Journey & Vision" />
-
         <div className="bg-white rounded-xl shadow-2xl overflow-hidden">
           <div className="grid md:grid-cols-2">
-            <motion.div
-              initial={{
-                x: -100,
-                opacity: 0,
-              }}
-              whileInView={{
-                x: 0,
-                opacity: 1,
-              }}
-              transition={{
-                duration: 1,
-                ease: "easeInOut",
-              }}
-              viewport={{
-                once: true,
-              }}
-              className="relative h-[500px] md:h-auto"
-            >
-              <Image
-                src="/ahma.jpg"
-                alt="Ahmad picture"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-
             <div className="p-8 md:p-12 bg-white text-[#1e2132]">
               <motion.div
                 initial={{
@@ -84,12 +55,12 @@ export default function AboutSection() {
                 <h3 className="text-xl font-bold mb-4">Key Initiatives:</h3>
                 <ul className="space-y-3">
                   {[
-                    "Educational scholarships for young women",
-                    "Rural healthcare accessibility programs",
-                    "Women's economic empowerment initiatives",
-                    "Clean water projects in underserved communities",
-                    "Youth leadership development programs",
-                    "Cultural heritage preservation",
+                     "Educational scholarships for young women",
+                     "Rural healthcare accessibility programs",
+                     "Women's economic empowerment initiatives",
+                     "Clean water projects in underserved communities",
+                     "Youth leadership development programs",
+                     "Cultural heritage preservation",
                   ].map((item, index) => (
                     <li key={index} className="flex items-start">
                       <span className="h-5 w-5 rounded-full bg-[#d4af37] flex-shrink-0 mt-1 mr-3"></span>
@@ -114,6 +85,39 @@ export default function AboutSection() {
                 </Link>
               </div>
             </div>
+            <motion.div
+              initial={{
+                x: -100,
+                opacity: 0,
+              }}
+              whileInView={{
+                x: 0,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1,
+                ease: "easeInOut",
+              }}
+              viewport={{
+                once: true,
+              }}
+              className="relative h-[500px] md:h-auto"
+            >
+              <Image
+                src="/ahma5.png"
+                alt="ahamad"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute bottom-20 left-10">
+                <p className="text-lg lg:text-xl text-white md:text-3xl font-light tracking-wide font-serif border-b border-white pb-2">
+                  About
+                </p>
+                <h1 className="mt-4 text-4xl text-white md:text-5xl font-light tracking-wide font-serif">
+                  The Queen
+                </h1>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
