@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function AboutHer() {
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="abou" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="bg-white rounded-xl shadow-2xl overflow-hidden">
           <div className="grid md:grid-cols-2">
@@ -104,8 +104,8 @@ export default function AboutHer() {
               className="relative h-[500px] md:h-auto"
             >
               <Image
-                src="/ahma5.png"
-                alt="ahamad"
+                src="/clara.png"
+                alt="/clara"
                 fill
                 className="object-cover"
               />
@@ -114,7 +114,7 @@ export default function AboutHer() {
                   About
                 </p>
                 <h1 className="mt-4 text-4xl text-white md:text-5xl font-light tracking-wide font-serif">
-                  The Queen
+                  The KING
                 </h1>
               </div>
             </motion.div>

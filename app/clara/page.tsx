@@ -1,22 +1,22 @@
+import AboutHer from "@/components/clara/AboutHer";
 import AboutSection from "@/components/clara/AboutSection";
-import BiographySection from "@/components/clara/BiographySection";
-// import Clara from "@/components/clara/Clara";
 import ContactSection from "@/components/clara/ContactSection";
+import Footer from "@/components/clara/Footer";
 import Gallary from "@/components/clara/Gallary";
 import HomeHero from "@/components/clara/Hero";
-import InitiativesSection from "@/components/clara/InitiativesSection";
-import React from "react";
+import BiographySection from "../../components/clara/BiographySection";
+
 
 export default function page() {
   return (
     <div>
       <HomeHero />
-      {/* <Clara /> */}
       <AboutSection />
+      <AboutHer />
       <BiographySection />
       <Gallary />
-      <InitiativesSection />
       <ContactSection />
+      <Footer />
     </div>
   );
 }

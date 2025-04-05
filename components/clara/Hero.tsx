@@ -2,13 +2,12 @@
 import { useState, useEffect } from "react";
 import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 export const slides = [
   {
     image: "/clara.png",
-    title: "Pure Joy Capture",
+    title: "Expression of Devotion",
     subtitle: "Dive into beautifully crafted virtual landscapes.",
   },
   {
@@ -114,41 +113,37 @@ export default function HomeHero() {
               transition={{ duration: 0.3 }}
             >
               <div className="flex flex-col space-y-6 pt-20 items-center">
-                <Link
-                  href="/clara"
-                  className="text-[#d4af37] text-xl font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
+                <motion.div
+                  initial={{
+                    y: 100,
+                    opacity: 0,
+                  }}
+                  whileInView={{
+                    y: 0,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    duration: 1,
+                    ease: "easeInOut",
+                  }}
+                  viewport={{
+                    once: true,
+                  }}
+                  className="text-white flex flex-col"
                 >
-                  Home
-                </Link>
-                <Link
-                  href="#about"
-                  className="text-white text-xl font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Biography
-                </Link>
-                <Link
-                  href="#initiatives"
-                  className="text-white text-xl font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Initiatives
-                </Link>
-                <Link
-                  href="#gallery"
-                  className="text-white text-xl font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Gallery
-                </Link>
-                <Link
-                  href="#contact"
-                  className="text-white text-xl font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Contact
-                </Link>
+                  <img
+                    className="w-full rounded-xl"
+                    src="/clara2.png"
+                    alt="personaldev"
+                  />
+                  <h2 className="my-[20px] text-2xl font-bold">
+                    Personal Development
+                  </h2>
+                  <p>
+                    Unlock your potential and build meaningful relationships
+                    through our comprehensive personal growth programs.
+                  </p>
+                </motion.div>
               </div>
             </motion.div>
           </>
@@ -156,12 +151,12 @@ export default function HomeHero() {
       </div>
       <div className="fixed top-7 z-40 inset-0">
         <h1 className="text-xl flex items-center justify-center text-white md:text-3xl font-light tracking-wide font-serif">
-          Ciroma Clara
+          CIROMA CLARA
         </h1>
       </div>
 
       <button
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-40 text-white rounded-full p-2"
+        className="absolute bottom-10 left-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-40 text-white rounded-full p-2"
         onClick={() =>
           goToSlide((currentIndex - 1 + slides.length) % slides.length)
         }
@@ -169,7 +164,7 @@ export default function HomeHero() {
         ◀
       </button>
       <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-40 text-white rounded-full p-2"
+        className="absolute bottom-10 right-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-40 text-white rounded-full p-2"
         onClick={() => goToSlide((currentIndex + 1) % slides.length)}
       >
         ▶

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 function Gallary() {
   return (
-    <section className="flex flex-col items-center bg-white w-full">
+    <section id="claragallery" className="flex flex-col items-center bg-white w-full">
       <motion.h1
         initial={{
           y: 100,
@@ -21,7 +21,7 @@ function Gallary() {
         viewport={{
           once: true,
         }}
-        className="text-4xl text-gray-800 md:text-6xl font-bold mt-[10px] mb-[50px]"
+        className="text-4xl text-gray-800 text-center md:text-6xl font-bold mt-[10px] mb-[50px]"
       >
         Our Gallary Approach
       </motion.h1>
@@ -46,7 +46,7 @@ function Gallary() {
         >
           <img
             className="w-full"
-            src="/personaldev.jpg"
+            src="/clara.png"
             alt="personaldev"
           />
           <h2 className="my-[20px] text-2xl font-bold">Personal Development</h2>
@@ -76,7 +76,7 @@ function Gallary() {
         >
           <img
             className="w-full"
-            src="/financialem.webp"
+            src="/clara.png"
             alt="financialem"
           />
           <h2 className="my-[20px] text-2xl font-bold">
@@ -108,7 +108,7 @@ function Gallary() {
         >
           <img
             className="w-full"
-            src="/personaldev.jpg"
+            src="/clara.png"
             alt="personaldev"
           />
           <h2 className="my-[20px] text-2xl font-bold">

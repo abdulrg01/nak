@@ -39,7 +39,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#1e2132] relative">
+    <section id="claracontact" className="py-20 bg-[#1e2132] relative">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"

@@ -14,7 +14,7 @@ export default function Footer() {
         <Facebook className="w-5 h-5 hover:text-white" />
         <Twitter className="w-5 h-5 hover:text-white" />
       </div>
-      <div className="hover:text-white">C2025 Abdulrahman</div>
+      <div className="hover:text-white">C2025 CLARA CHIBUZO CIROMA</div>
     </div>
   );
 }
