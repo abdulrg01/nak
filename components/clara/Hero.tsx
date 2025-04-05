@@ -133,7 +133,7 @@ export default function HomeHero() {
                 >
                   <img
                     className="w-full rounded-xl"
-                    src="/clara2.png"
+                    src="/clara.png"
                     alt="personaldev"
                   />
                   <h2 className="my-[20px] text-2xl font-bold">

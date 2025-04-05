@@ -1,4 +1,4 @@
-import AboutHer from "@/components/clara/AboutHer";
+// import AboutHer from "@/components/clara/AboutHer";
 import AboutSection from "@/components/clara/AboutSection";
 import ContactSection from "@/components/clara/ContactSection";
 import Footer from "@/components/clara/Footer";
@@ -12,7 +12,7 @@ export default function page() {
     <div>
       <HomeHero />
       <AboutSection />
-      <AboutHer />
+      {/* <AboutHer /> */}
       <BiographySection />
       <Gallary />
       <ContactSection />
