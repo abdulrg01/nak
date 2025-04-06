@@ -349,7 +349,7 @@ export default function NakLandingPage() {
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20%28183%29-mBnDu8FGhE9AaBlch007LZ9ivGO0CP.png"
               alt="Taunton School building"
               className="object-cover"
-              priority
+            
             />
             <Link
               href="#core-prospectus"
