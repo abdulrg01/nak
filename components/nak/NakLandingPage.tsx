@@ -345,10 +345,9 @@ export default function NakLandingPage() {
 
           {/* Right image panel */}
           <div className="relative h-[300px] md:h-auto md:w-1/2">
-            <Image
+            <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20%28183%29-mBnDu8FGhE9AaBlch007LZ9ivGO0CP.png"
               alt="Taunton School building"
-              fill
               className="object-cover"
               priority
             />
