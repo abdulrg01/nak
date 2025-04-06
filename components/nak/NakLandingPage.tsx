@@ -9,7 +9,7 @@ export default function NakLandingPage() {
         <section id="about" className="py-16 bg-[#56a747]">
           <div className="container px-4 md:px-6">
             <div className="text-center space-y-4 mb-28">
-              <h1 className="text-4xl md:text-7xl uppercase text-white flex items-center justify-center font-medium tracking-wider max-w-3xl transition-all duration-1000 mb-16">
+              <h1 className="text-4xl md:text-7xl uppercase text-white font-medium tracking-wider transition-all duration-1000 mb-16">
                 Your Nak <br /> Academy <span>Journey</span>
               </h1>
               <div className="flex items-center gap-5 justify-center flex-wrap text-white">
@@ -17,7 +17,7 @@ export default function NakLandingPage() {
                   href="#about"
                   className="inline-flex items-center justify-center rounded-none border-2 text-[#56a747] border-white bg-primary px-8 py-3 uppercase font-semibold transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                 >
-                 Nursery
+                  Nursery
                 </Link>
                 <Link
                   href="#admissions"
@@ -29,7 +29,7 @@ export default function NakLandingPage() {
                   href="#admissions"
                   className="inline-flex items-center justify-center rounded-none border-2 border-white bg-transparent hover:text-blue-950 uppercase px-8 py-3 font-semibold transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                 >
-                 Junior
+                  Junior
                 </Link>
                 <Link
                   href="#admissions"
@@ -47,9 +47,7 @@ export default function NakLandingPage() {
                   Nursery
                 </h2>
                 <div className="w-full h-1 bg-white mt-4"></div>
-                <p className="text-primary md:text-lg">
-                 For ages 0-4
-                </p>
+                <p className="text-primary md:text-lg">For ages 0-4</p>
                 <p className="text-primary md:text-lg">
                   At Nak Academy, we believe every child deserves a supportive
                   and stimulating environment to grow and learn. Our dedicated
@@ -196,14 +194,14 @@ export default function NakLandingPage() {
                 >
                   <div className="flex items-center gap-4 mb-4">
                     <Calendar className="h-5 w-5 text-primary" />
-                    <span className="text-sm font-medium text-blue-950">{event.date}</span>
+                    <span className="text-sm font-medium text-blue-950">
+                      {event.date}
+                    </span>
                   </div>
                   <h3 className="text-xl text-blue-950 font-bold group-hover:text-primary transition-colors">
                     {event.title}
                   </h3>
-                  <p className="mt-2 text-blue-950">
-                    {event.description}
-                  </p>
+                  <p className="mt-2 text-blue-950">{event.description}</p>
                   <div className="mt-4 text-sm text-blue-950">
                     <div className="flex items-center gap-2 mb-1">
                       <svg
@@ -213,6 +211,7 @@ export default function NakLandingPage() {
                         viewBox="0 0 24 24"
                         fill="none"
                         strokeWidth="2"
+                        color="#56a747"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         className="h-4 w-4 text-blue-900"
@@ -241,88 +240,6 @@ export default function NakLandingPage() {
           </div>
         </section>
 
-        {/* News Section */}
-        <section id="news" className="py-16 bg-muted/50">
-          <div className="container px-4 md:px-6">
-            <div className="text-center space-y-4 mb-10">
-              <div className="inline-block rounded-lg bg-[#56a747] px-3 py-1 text-sm text-primary">
-                News
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-                School News & Updates
-              </h2>
-              <p className="mx-auto max-w-[700px] text-blue-950 md:text-lg">
-                Stay informed about the latest happenings at Sunshine
-                Elementary.
-              </p>
-            </div>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {[
-                {
-                  title: "New Library Collection Arrives",
-                  date: "March 28, 2025",
-                  excerpt:
-                    "Our school library has received a donation of 500 new books covering various subjects and reading levels.",
-                  image: "/nak/nak.jpg",
-                },
-                {
-                  title: "Students Win Regional Math Competition",
-                  date: "March 15, 2025",
-                  excerpt:
-                    "Our 5th-grade math team took first place at the regional mathematics competition last weekend.",
-                  image: "/nak/nak.jpg",
-                },
-                {
-                  title: "Summer Program Registration Now Open",
-                  date: "March 10, 2025",
-                  excerpt:
-                    "Registration for our popular summer enrichment program is now open. Spaces fill quickly!",
-                  image: "/nak/nak.jpg",
-                },
-              ].map((news, index) => (
-                <div
-                  key={index}
-                  className="group overflow-hidden rounded-xl border bg-white transition-all duration-200 hover:shadow-md"
-                >
-                  <div className="relative h-48 overflow-hidden">
-                    <Image
-                      src={news.image || "/placeholder.svg"}
-                      alt={news.title}
-                      width={400}
-                      height={200}
-                      className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <div className="text-sm text-blue-950 mb-2">
-                      {news.date}
-                    </div>
-                    <h3 className="text-xl font-bold group-hover:text-primary transition-colors">
-                      {news.title}
-                    </h3>
-                    <p className="mt-2 text-blue-950">{news.excerpt}</p>
-                    <Link
-                      href="#"
-                      className="mt-4 inline-flex items-center text-sm font-medium text-primary hover:underline"
-                    >
-                      Read More
-                      <ChevronRight className="ml-1 h-4 w-4" />
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="mt-10 text-center">
-              <Link
-                href="#"
-                className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-              >
-                View All News
-              </Link>
-            </div>
-          </div>
-        </section>
-
         {/* Gallery Section */}
         <section id="gallery" className="py-16 bg-white">
           <div className="container px-4 md:px-6">
@@ -330,7 +247,7 @@ export default function NakLandingPage() {
               <div className="inline-block rounded-lg bg-[#56a747] px-3 py-1 text-sm text-primary">
                 Gallery
               </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+              <h2 className="text-3xl font-bold tracking-tighter text-blue-950 sm:text-4xl">
                 School Life in Pictures
               </h2>
               <p className="mx-auto max-w-[700px] text-blue-950 md:text-lg">
@@ -359,13 +276,90 @@ export default function NakLandingPage() {
             <div className="mt-10 text-center">
               <Link
                 href="#"
-                className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                className="inline-flex h-10 items-center bg-[#56a747] text-white justify-center rounded-md border border-input px-8 text-sm font-medium shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
               >
                 View Full Gallery
               </Link>
             </div>
           </div>
         </section>
+
+        {/* school event */}
+
+        <div className="flex flex-col md:flex-row h-screen w-full">
+          {/* Left content panel */}
+          <div className="relative bg-white p-8 md:p-12 md:w-1/2 flex flex-col justify-center">
+            <div className="max-w-xl">
+              <h1 className="mb-6">
+                <span className="block text-[#0a4a6e] text-4xl md:text-5xl font-medium leading-tight">
+                  WE LOOK FORWARD TO
+                </span>
+                <span className="block text-[#a8a1c2] text-4xl md:text-5xl font-light leading-tight">
+                  WELCOMING YOU
+                </span>
+              </h1>
+
+              <div className="h-px w-full bg-gray-300 my-6"></div>
+
+              <div className="space-y-6 text-[#0a4a6e]">
+                <p className="text-base">
+                  Join our Headmaster, James Johnson, and the Taunton School
+                  Team at an upcoming open event.
+                </p>
+
+                <p className="text-base">
+                  This is the best way for prospective families to experience
+                  Taunton School with the opportunity to meet members of staff,
+                  tour the state-of-the-art facilities and ask questions.
+                </p>
+
+                <p className="text-base">
+                  We offer in-person and virtual options to suit everyone&apos;s
+                  needs including tailored events for pre-prep and nursery,
+                  military families, international families, sixth form as well
+                  whole school open mornings.
+                </p>
+
+                <p className="text-base">
+                  The events will give you the chance to experience life at
+                  Taunton School for yourself.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                <Link
+                  href="#book-event"
+                  className="bg-[#0a4a6e] text-white px-6 py-3 font-medium text-sm tracking-wide hover:bg-[#083a58] transition-colors"
+                >
+                  BOOK AN OPEN EVENT
+                </Link>
+                <Link
+                  href="#view-prospectus"
+                  className="bg-white text-[#0a4a6e] border border-[#0a4a6e] px-6 py-3 font-medium text-sm tracking-wide hover:bg-gray-50 transition-colors"
+                >
+                  VIEW PROSPECTUS
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Right image panel */}
+          <div className="relative h-[300px] md:h-auto md:w-1/2">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20%28183%29-mBnDu8FGhE9AaBlch007LZ9ivGO0CP.png"
+              alt="Taunton School building"
+              fill
+              className="object-cover"
+              priority
+            />
+            <Link
+              href="#core-prospectus"
+              className="absolute top-[30%] right-8 text-[#4a7dff] hover:underline"
+            >
+              Core Prospectus
+            </Link>
+          </div>
+        </div>
 
         {/* Contact Section */}
         <section id="contact" className="py-16 bg-muted/50">
@@ -507,10 +501,7 @@ export default function NakLandingPage() {
                 Nurturing minds, building futures since 1985.
               </p>
               <div className="flex gap-4 mt-4">
-                <Link
-                  href="#"
-                  className="text-blue-950 hover:text-primary"
-                >
+                <Link href="#" className="text-blue-950 hover:text-primary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -527,10 +518,7 @@ export default function NakLandingPage() {
                   </svg>
                   <span className="sr-only">Facebook</span>
                 </Link>
-                <Link
-                  href="#"
-                  className="text-blue-950 hover:text-primary"
-                >
+                <Link href="#" className="text-blue-950 hover:text-primary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -556,10 +544,7 @@ export default function NakLandingPage() {
                   </svg>
                   <span className="sr-only">Instagram</span>
                 </Link>
-                <Link
-                  href="#"
-                  className="text-blue-950 hover:text-primary"
-                >
+                <Link href="#" className="text-blue-950 hover:text-primary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -576,10 +561,7 @@ export default function NakLandingPage() {
                   </svg>
                   <span className="sr-only">Twitter</span>
                 </Link>
-                <Link
-                  href="#"
-                  className="text-blue-950 hover:text-primary"
-                >
+                <Link href="#" className="text-blue-950 hover:text-primary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -657,50 +639,32 @@ export default function NakLandingPage() {
               <h3 className="text-lg font-bold mb-4">Resources</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link
-                    href="#"
-                    className="text-blue-950 hover:text-primary"
-                  >
+                  <Link href="#" className="text-blue-950 hover:text-primary">
                     Parent Portal
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="#"
-                    className="text-blue-950 hover:text-primary"
-                  >
+                  <Link href="#" className="text-blue-950 hover:text-primary">
                     Student Resources
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="#"
-                    className="text-blue-950 hover:text-primary"
-                  >
+                  <Link href="#" className="text-blue-950 hover:text-primary">
                     Staff Directory
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="#"
-                    className="text-blue-950 hover:text-primary"
-                  >
+                  <Link href="#" className="text-blue-950 hover:text-primary">
                     School Calendar
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="#"
-                    className="text-blue-950 hover:text-primary"
-                  >
+                  <Link href="#" className="text-blue-950 hover:text-primary">
                     Lunch Menu
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="#"
-                    className="text-blue-950 hover:text-primary"
-                  >
+                  <Link href="#" className="text-blue-950 hover:text-primary">
                     Forms & Documents
                   </Link>
                 </li>
