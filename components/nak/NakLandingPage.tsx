@@ -286,76 +286,73 @@ export default function NakLandingPage() {
 
         {/* school event */}
 
-        <div className="flex flex-col md:flex-row h-screen w-full">
-          {/* Left content panel */}
-          <div className="relative bg-white p-8 md:p-12 md:w-1/2 flex flex-col justify-center">
-            <div className="max-w-xl">
-              <h1 className="mb-6">
-                <span className="block text-[#0a4a6e] text-4xl md:text-5xl font-medium leading-tight">
-                  WE LOOK FORWARD TO
-                </span>
-                <span className="block text-[#a8a1c2] text-4xl md:text-5xl font-light leading-tight">
-                  WELCOMING YOU
-                </span>
-              </h1>
-
-              <div className="h-px w-full bg-gray-300 my-6"></div>
-
-              <div className="space-y-6 text-[#0a4a6e]">
-                <p className="text-base">
-                  Join our Headmaster, James Johnson, and the Taunton School
-                  Team at an upcoming open event.
-                </p>
-
-                <p className="text-base">
-                  This is the best way for prospective families to experience
-                  Taunton School with the opportunity to meet members of staff,
-                  tour the state-of-the-art facilities and ask questions.
-                </p>
-
-                <p className="text-base">
-                  We offer in-person and virtual options to suit everyone&apos;s
-                  needs including tailored events for pre-prep and nursery,
-                  military families, international families, sixth form as well
-                  whole school open mornings.
-                </p>
-
-                <p className="text-base">
-                  The events will give you the chance to experience life at
-                  Taunton School for yourself.
-                </p>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                <Link
-                  href="#book-event"
-                  className="bg-[#0a4a6e] text-white px-6 py-3 font-medium text-sm tracking-wide hover:bg-[#083a58] transition-colors"
-                >
-                  BOOK AN OPEN EVENT
-                </Link>
-                <Link
-                  href="#view-prospectus"
-                  className="bg-white text-[#0a4a6e] border border-[#0a4a6e] px-6 py-3 font-medium text-sm tracking-wide hover:bg-gray-50 transition-colors"
-                >
-                  VIEW PROSPECTUS
-                </Link>
-              </div>
-            </div>
-          </div>
-
+        <div className="h-screen w-full">
           {/* Right image panel */}
-          <div className="relative h-[300px] md:h-auto md:w-1/2">
+          <div className="relative min-h-screen w-full overflow-hidden">
             <img
               src="/nak/nak.jpg"
               alt="Taunton School building"
-              className="object-cover"
+              className="object-cover h-full w-full transition-transform duration-500 hover:scale-105 blur-lg"
             />
-            <Link
-              href="#core-prospectus"
-              className="absolute top-[30%] right-8 text-[#4a7dff] hover:underline"
-            >
-              Core Prospectus
-            </Link>
+
+            {/* Left content panel */}
+            <div className="absolute left-0 top-[15%] w-full">
+              <div className="bg-white p-8 md:p-12 md:w-1/2 flex flex-col justify-center">
+                <div className="max-w-xl">
+                  <h1 className="mb-6">
+                    <span className="block text-[#0a4a6e] text-4xl md:text-5xl font-medium leading-tight">
+                      WE LOOK FORWARD TO
+                    </span>
+                    <span className="block text-[#a8a1c2] text-4xl md:text-5xl font-light leading-tight">
+                      WELCOMING YOU
+                    </span>
+                  </h1>
+
+                  <div className="h-px w-full bg-gray-300 my-6"></div>
+
+                  <div className="space-y-6 text-[#0a4a6e]">
+                    <p className="text-base">
+                      Join our Headmaster, James Johnson, and the Taunton School
+                      Team at an upcoming open event.
+                    </p>
+
+                    <p className="text-base">
+                      This is the best way for prospective families to
+                      experience Taunton School with the opportunity to meet
+                      members of staff, tour the state-of-the-art facilities and
+                      ask questions.
+                    </p>
+
+                    <p className="text-base">
+                      We offer in-person and virtual options to suit
+                      everyone&apos;s needs including tailored events for
+                      pre-prep and nursery, military families, international
+                      families, sixth form as well whole school open mornings.
+                    </p>
+
+                    <p className="text-base">
+                      The events will give you the chance to experience life at
+                      Taunton School for yourself.
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                    <Link
+                      href="#book-event"
+                      className="bg-[#0a4a6e] text-white px-6 py-3 font-medium text-sm tracking-wide hover:bg-[#083a58] transition-colors"
+                    >
+                      BOOK AN OPEN EVENT
+                    </Link>
+                    <Link
+                      href="#view-prospectus"
+                      className="bg-white text-[#0a4a6e] border border-[#0a4a6e] px-6 py-3 font-medium text-sm tracking-wide hover:bg-gray-50 transition-colors"
+                    >
+                      VIEW PROSPECTUS
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
