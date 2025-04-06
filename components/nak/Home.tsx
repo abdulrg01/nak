@@ -1,11 +1,11 @@
 "use client";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Plus } from "lucide-react";
 import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
-export default function HeroSection() {
+export default function Home() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -22,6 +22,13 @@ export default function HeroSection() {
     };
   }, [scrolled]);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <section className="relative min-h-screen flex items-center pt-32 overflow-hidden">
@@ -30,26 +37,26 @@ export default function HeroSection() {
           className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "shadow-md" : ""}`}
         >
           {/* Top Header */}
-          <header className="bg-white py-4 px-6 md:px-16 border-b">
+          <header className="bg-white py-6 px-6 md:px-16 border-b">
             <div className="flex justify-between items-center">
               <div className="flex items-center">
                 <Image
-                  src="/nak.jpg"
+                  src="/nak/nak.jpg"
                   alt="Taunton School Logo"
                   width={50}
                   height={50}
                   className="mr-4 rounded-2xl"
                 />
                 <div className="flex flex-col">
-                  <span className="text-[#003366] text-xl font-semibold tracking-wide">
+                  <span className="text-blue-900 text-xl font-semibold tracking-wide">
                     NAK ACADEMY
                   </span>
                   <div className="flex items-center">
-                    <div className="mr-2 border-t border-red-500 w-10"></div>
-                    <span className="text-[#003366] text-sm tracking-wider">
+                    <div className="mr-2 border-t border-[#56a747] w-10"></div>
+                    <span className="text-[#56a747] text-sm tracking-wider">
                       SCHOOL
                     </span>
-                    <div className="mx-2 border-t border-red-500 w-10"></div>
+                    <div className="mx-2 border-t border-[#56a747] w-10"></div>
                   </div>
                 </div>
               </div>
@@ -74,24 +81,24 @@ export default function HeroSection() {
 
               <nav className="hidden lg:flex items-center text-xs space-x-6">
                 <div className="relative group">
-                  <button className="flex items-center text-[#003366] font-medium">
+                  <button className="flex items-center text-blue-900 font-bold">
                     YOUR TAUNTON SCHOOL JOURNEY
                     <ChevronDown className="ml-1 h-4 w-4" />
                   </button>
                 </div>
                 <div className="relative group">
-                  <button className="flex items-center text-[#003366] font-medium">
+                  <button className="flex items-center text-blue-900 font-bold">
                     DISCOVER TAUNTON SCHOOL
                     <ChevronDown className="ml-1 h-4 w-4" />
                   </button>
                 </div>
                 <div className="relative group">
-                  <button className="flex items-center text-[#003366] font-medium">
+                  <button className="flex items-center text-blue-900 font-bold">
                     ENGAGE WITH TAUNTON SCHOOL
                     <ChevronDown className="ml-1 h-4 w-4" />
                   </button>
                 </div>
-                <Link href="/contact" className="text-[#003366] font-medium">
+                <Link href="/contact" className="text-blue-900 font-bold">
                   CONTACT US
                 </Link>
               </nav>
@@ -100,14 +107,14 @@ export default function HeroSection() {
 
           {/* Secondary Navigation */}
           <div
-            className={`bg-[#002855] text-white transition-all duration-500 ${
+            className={`bg-[#56a747] text-white transition-all duration-500 ${
               scrolled
                 ? "max-h-0 opacity-0 overflow-hidden"
                 : "max-h-16 opacity-100"
             }`}
           >
             <div className="container mx-auto">
-              <nav className="hidden md:flex flex-wrap justify-center text-xs">
+              <nav className="hidden md:flex flex-wrap justify-center font-semibold">
                 {[
                   "INTERNATIONAL",
                   "HINKLEY POINT FAMILIES",
@@ -123,7 +130,7 @@ export default function HeroSection() {
                   <Link
                     key={item}
                     href="#"
-                    className="px-3 py-4 hover:bg-[#003366] transition-colors duration-200"
+                    className="px-3 py-4 hover:bg-[#56a747] transition-colors text-xs duration-200"
                   >
                     {item}
                   </Link>
@@ -134,7 +141,7 @@ export default function HeroSection() {
                   <Link
                     key={item}
                     href="#"
-                    className="px-3 py-4 hover:bg-[#003366] transition-colors duration-200"
+                    className="px-3 py-4 hover:bg-[#56a747] transition-colors duration-200"
                   >
                     {item}
                   </Link>
@@ -145,25 +152,51 @@ export default function HeroSection() {
         </div>
         <div className="absolute inset-0 z-0">
           <Image
-            src="/nak.jpg"
+            src="/nak/nak.jpg"
             alt="Luxurious salon interior"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#56a747]/80 via-[#56a747]/10 to-transparent"></div>
         </div>
 
         <div className="container-custom relative z-10 px-20 mt-10">
           <div className="max-w-2xl text-white">
-            <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-              A School for <br /> International <br /> Families
-            </h1>
-            <Button variant="outline" className="my-10">
-              Discover more
-            </Button>
+            <h2
+              className={cn(
+                "text-4xl md:text-8xl font-extralight mb-4 transition-all duration-1000 max-w-3xl"
+              )}
+            >
+              Find Your Exceptional
+              <div className="w-24 h-1 bg-white mt-4"></div>
+            </h2>
+            <p
+              className={cn(
+                "text-lg md:text-xl font-medium max-w-lg transition-all duration-1000 mt-3 mb-10"
+              )}
+              style={{ transitionDelay: "600ms" }}
+            >
+              Welcome to Nak Academy. An independent day and boarding school for
+              ages 0 – 18. Your Journey
+            </p>
+            <p
+              className={cn(
+                "text-white uppercase font-bold text-sm tracking-wider transition-all duration-300 mt-6"
+              )}
+            >
+              Learn More
+              <div className="w-24 h-1 bg-white mt-4"></div>
+            </p>
           </div>
         </div>
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-3 left-4 z-50 bg-white hover:bg-[#56a747] text-black p-4 shadow-lg"
+          aria-label="Scroll to top"
+        >
+          <Plus className="h-7 w-7" />
+        </button>
       </section>
     </>
   );
