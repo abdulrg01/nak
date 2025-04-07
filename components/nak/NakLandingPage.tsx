@@ -261,7 +261,7 @@ export default function NakLandingPage() {
                   className="group relative overflow-hidden rounded-xl"
                 >
                   <Image
-                    src={`/nak.jpg`}
+                    src={`/nak/nak.jpg`}
                     alt={`Gallery image ${index + 1}`}
                     width={300}
                     height={300}
@@ -297,7 +297,7 @@ export default function NakLandingPage() {
             />
 
             {/* Content panel */}
-            <div className="absolute left-0 top-0 w-full h-full py-12 md:py-0">
+            <div className="absolute left-0 top-0 w-full h-full py-12 md:py-0 px-10">
               <div className="flex h-full items-center justify-center md:justify-start">
                 <div className="bg-white p-8 md:p-12 w-full max-w-md md:max-w-none md:w-1/2 md:ml-0 my-auto overflow-y-auto max-h-full">
                   <div className="max-w-xl">
