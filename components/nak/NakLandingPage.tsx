@@ -285,70 +285,72 @@ export default function NakLandingPage() {
         </section>
 
         {/* school event */}
-
-        <div className="h-screen w-full">
-          {/* Right image panel */}
-          <div className="relative min-h-screen w-full overflow-hidden">
+        <div className="relative w-full">
+          <div
+            className="relative w-full overflow-hidden"
+            style={{ minHeight: "700px" }}
+          >
             <img
               src="/nak/nak.jpg"
               alt="Taunton School building"
               className="object-cover h-full w-full transition-transform duration-500 hover:scale-105 blur-lg"
             />
 
-            {/* Left content panel */}
-            <div className="absolute left-0 top-[15%] w-full">
-              <div className="bg-white p-8 md:p-12 md:w-1/2 flex flex-col justify-center">
-                <div className="max-w-xl">
-                  <h1 className="mb-6">
-                    <span className="block text-[#0a4a6e] text-4xl md:text-5xl font-medium leading-tight">
-                      WE LOOK FORWARD TO
-                    </span>
-                    <span className="block text-[#a8a1c2] text-4xl md:text-5xl font-light leading-tight">
-                      WELCOMING YOU
-                    </span>
-                  </h1>
+            {/* Content panel */}
+            <div className="absolute left-0 top-0 w-full h-full py-12 md:py-0">
+              <div className="flex h-full items-center justify-center md:justify-start">
+                <div className="bg-white p-8 md:p-12 w-full max-w-md md:max-w-none md:w-1/2 md:ml-0 my-auto overflow-y-auto max-h-full">
+                  <div className="max-w-xl">
+                    <h1 className="mb-6">
+                      <span className="block text-[#0a4a6e] text-4xl md:text-5xl font-medium leading-tight">
+                        WE LOOK FORWARD TO
+                      </span>
+                      <span className="block text-[#a8a1c2] text-4xl md:text-5xl font-light leading-tight">
+                        WELCOMING YOU
+                      </span>
+                    </h1>
 
-                  <div className="h-px w-full bg-gray-300 my-6"></div>
+                    <div className="h-px w-full bg-gray-300 my-6"></div>
 
-                  <div className="space-y-6 text-[#0a4a6e]">
-                    <p className="text-base">
-                      Join our Headmaster, James Johnson, and the Taunton School
-                      Team at an upcoming open event.
-                    </p>
+                    <div className="space-y-6 text-[#0a4a6e]">
+                      <p className="text-base">
+                        Join our Headmaster, headmaster name, and the Nak academy Team at an upcoming open event.
+                      </p>
 
-                    <p className="text-base">
-                      This is the best way for prospective families to
-                      experience Taunton School with the opportunity to meet
-                      members of staff, tour the state-of-the-art facilities and
-                      ask questions.
-                    </p>
+                      <p className="text-base">
+                        This is the best way for prospective families to
+                        experience Taunton School with the opportunity to meet
+                        members of staff, tour the state-of-the-art facilities
+                        and ask questions.
+                      </p>
 
-                    <p className="text-base">
-                      We offer in-person and virtual options to suit
-                      everyone&apos;s needs including tailored events for
-                      pre-prep and nursery, military families, international
-                      families, sixth form as well whole school open mornings.
-                    </p>
+                      <p className="text-base">
+                        We offer in-person and virtual options to suit
+                        everyone&apos;s needs including tailored events for
+                        pre-prep and nursery, military families, international
+                        families, sixth form as well whole school open mornings.
+                      </p>
 
-                    <p className="text-base">
-                      The events will give you the chance to experience life at
-                      Taunton School for yourself.
-                    </p>
-                  </div>
+                      <p className="text-base">
+                        The events will give you the chance to experience life
+                        at Taunton School for yourself.
+                      </p>
+                    </div>
 
-                  <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                    <Link
-                      href="#book-event"
-                      className="bg-[#0a4a6e] text-white px-6 py-3 font-medium text-sm tracking-wide hover:bg-[#083a58] transition-colors"
-                    >
-                      BOOK AN OPEN EVENT
-                    </Link>
-                    <Link
-                      href="#view-prospectus"
-                      className="bg-white text-[#0a4a6e] border border-[#0a4a6e] px-6 py-3 font-medium text-sm tracking-wide hover:bg-gray-50 transition-colors"
-                    >
-                      VIEW PROSPECTUS
-                    </Link>
+                    <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                      <Link
+                        href="#book-event"
+                        className="bg-[#0a4a6e] text-white px-6 py-3 font-medium text-sm tracking-wide hover:bg-[#083a58] transition-colors"
+                      >
+                        BOOK AN OPEN EVENT
+                      </Link>
+                      <Link
+                        href="#view-prospectus"
+                        className="bg-white text-[#0a4a6e] border border-[#0a4a6e] px-6 py-3 font-medium text-sm tracking-wide hover:bg-gray-50 transition-colors"
+                      >
+                        VIEW PROSPECTUS
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -357,14 +359,14 @@ export default function NakLandingPage() {
         </div>
 
         {/* Contact Section */}
-        <section id="contact" className="py-16 bg-muted/50">
-          <div className="container px-4 md:px-6">
+        <section id="contact" className="py-16 bg-gray-200">
+          <div className="container px-4 md:px-6 mx-auto">
             <div className="grid gap-10 lg:grid-cols-2">
               <div className="space-y-4">
-                <div className="inline-block rounded-lg bg-[#56a747] px-3 py-1 text-sm text-primary">
+                <div className="inline-block rounded-lg bg-[#56a747] px-3 py-1 text-sm text-white">
                   Contact Us
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+                <h2 className="text-3xl font-bold tracking-tighter text-blue-950 sm:text-4xl">
                   Get in Touch
                 </h2>
                 <p className="text-blue-950 md:text-lg">
@@ -373,25 +375,25 @@ export default function NakLandingPage() {
                 </p>
                 <div className="space-y-4 mt-6">
                   <div className="flex items-start gap-4">
-                    <MapPin className="h-5 w-5 text-primary mt-0.5" />
+                    <MapPin className="h-5 w-5 text-blue-950 mt-0.5" />
                     <div>
-                      <h3 className="font-medium">Address</h3>
+                      <h3 className="font-medium text-blue-950">Address</h3>
                       <p className="text-blue-950">
                         123 Sunshine Avenue, Anytown, ST 12345
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <Phone className="h-5 w-5 text-primary mt-0.5" />
+                    <Phone className="h-5 w-5 text-blue-950 mt-0.5" />
                     <div>
-                      <h3 className="font-medium">Phone</h3>
+                      <h3 className="font-medium text-blue-950">Phone</h3>
                       <p className="text-blue-950">(123) 456-7890</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <Mail className="h-5 w-5 text-primary mt-0.5" />
+                    <Mail className="h-5 w-5 text-blue-950 mt-0.5" />
                     <div>
-                      <h3 className="font-medium">Email</h3>
+                      <h3 className="font-medium text-blue-950">Email</h3>
                       <p className="text-blue-950">
                         info@sunshineelementary.edu
                       </p>
@@ -399,7 +401,9 @@ export default function NakLandingPage() {
                   </div>
                 </div>
                 <div className="mt-6">
-                  <h3 className="font-medium mb-2">Office Hours</h3>
+                  <h3 className="font-medium text-blue-950 mb-2">
+                    Office Hours
+                  </h3>
                   <ul className="space-y-1 text-blue-950">
                     <li>Monday - Friday: 7:30 AM - 4:00 PM</li>
                     <li>Saturday - Sunday: Closed</li>
@@ -466,7 +470,7 @@ export default function NakLandingPage() {
                   </div>
                   <button
                     type="submit"
-                    className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                    className="inline-flex h-10 items-center justify-center rounded-md px-4 py-2 text-sm font-medium bg-[#56a747] text-white shadow transition-colors hover:bg-[#51ac41] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                   >
                     Send Message
                   </button>
@@ -478,7 +482,7 @@ export default function NakLandingPage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-muted py-12 border-t">
+      <footer className="bg-gray-300 text-blue-950 py-12 border-t">
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div>
@@ -496,7 +500,7 @@ export default function NakLandingPage() {
                 Nurturing minds, building futures since 1985.
               </p>
               <div className="flex gap-4 mt-4">
-                <Link href="#" className="text-blue-950 hover:text-primary">
+                <Link href="#" className="text-blue-950 hover:text-blue-950">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -513,7 +517,7 @@ export default function NakLandingPage() {
                   </svg>
                   <span className="sr-only">Facebook</span>
                 </Link>
-                <Link href="#" className="text-blue-950 hover:text-primary">
+                <Link href="#" className="text-blue-950 hover:text-blue-950">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -539,7 +543,7 @@ export default function NakLandingPage() {
                   </svg>
                   <span className="sr-only">Instagram</span>
                 </Link>
-                <Link href="#" className="text-blue-950 hover:text-primary">
+                <Link href="#" className="text-blue-950 hover:text-blue-950">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -556,7 +560,7 @@ export default function NakLandingPage() {
                   </svg>
                   <span className="sr-only">Twitter</span>
                 </Link>
-                <Link href="#" className="text-blue-950 hover:text-primary">
+                <Link href="#" className="text-blue-950 hover:text-blue-950">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -583,7 +587,7 @@ export default function NakLandingPage() {
                 <li>
                   <Link
                     href="#about"
-                    className="text-blue-950 hover:text-primary"
+                    className="text-blue-950 hover:text-blue-950"
                   >
                     About Us
                   </Link>
@@ -591,7 +595,7 @@ export default function NakLandingPage() {
                 <li>
                   <Link
                     href="#admissions"
-                    className="text-blue-950 hover:text-primary"
+                    className="text-blue-950 hover:text-blue-950"
                   >
                     Admissions
                   </Link>
@@ -599,7 +603,7 @@ export default function NakLandingPage() {
                 <li>
                   <Link
                     href="#events"
-                    className="text-blue-950 hover:text-primary"
+                    className="text-blue-950 hover:text-blue-950"
                   >
                     Events
                   </Link>
@@ -607,7 +611,7 @@ export default function NakLandingPage() {
                 <li>
                   <Link
                     href="#news"
-                    className="text-blue-950 hover:text-primary"
+                    className="text-blue-950 hover:text-blue-950"
                   >
                     News
                   </Link>
@@ -615,7 +619,7 @@ export default function NakLandingPage() {
                 <li>
                   <Link
                     href="#gallery"
-                    className="text-blue-950 hover:text-primary"
+                    className="text-blue-950 hover:text-blue-950"
                   >
                     Gallery
                   </Link>
@@ -623,7 +627,7 @@ export default function NakLandingPage() {
                 <li>
                   <Link
                     href="#contact"
-                    className="text-blue-950 hover:text-primary"
+                    className="text-blue-950 hover:text-blue-950"
                   >
                     Contact
                   </Link>
@@ -634,32 +638,32 @@ export default function NakLandingPage() {
               <h3 className="text-lg font-bold mb-4">Resources</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#" className="text-blue-950 hover:text-primary">
+                  <Link href="#" className="text-blue-950 hover:text-blue-950">
                     Parent Portal
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-blue-950 hover:text-primary">
+                  <Link href="#" className="text-blue-950 hover:text-blue-950">
                     Student Resources
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-blue-950 hover:text-primary">
+                  <Link href="#" className="text-blue-950 hover:text-blue-950">
                     Staff Directory
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-blue-950 hover:text-primary">
+                  <Link href="#" className="text-blue-950 hover:text-blue-950">
                     School Calendar
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-blue-950 hover:text-primary">
+                  <Link href="#" className="text-blue-950 hover:text-blue-950">
                     Lunch Menu
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-blue-950 hover:text-primary">
+                  <Link href="#" className="text-blue-950 hover:text-blue-950">
                     Forms & Documents
                   </Link>
                 </li>

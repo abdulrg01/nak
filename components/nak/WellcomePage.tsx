@@ -1,24 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
+import { SparklesPreview } from "../SparklesPreview";
 
 export default function WelcomePage() {
   return (
     <div className="bg-white pb-24">
-      <div className="container-custom relative z-10 px-20 pt-10">
-        <div className="max-w-2xl text-white mt-20">
-          <h2
-            className={cn(
-              "text-4xl md:text-7xl uppercase text-[#56accb] font-medium tracking-wider mb-4 transition-all duration-1000 max-w-3xl"
-            )}
-          >
-            Welcome to <br /> <span className="text-blue-950">Nak Academy</span>
-            <div className="w-24 h-1 bg-white mt-4"></div>
-          </h2>
-        </div>
+      <div className="py-20">
+        <SparklesPreview />
       </div>
 
-      <div className="container px-4 md:px-6">
+      <div className="container -mt-20 px-4 md:px-6">
         <div className="grid gap-10 lg:grid-cols-2 items-center">
           <div className="relative h-[600px] overflow-hidden">
             <Image

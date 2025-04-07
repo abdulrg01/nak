@@ -1,11 +1,12 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronDown, Plus } from "lucide-react";
+import { ChevronDown, Menu, Plus, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -61,22 +62,56 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex md:hidden">
-                <svg
-                  className="w-5 h-5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 17 14"
+              {/* Mobile Menu Button */}
+              <div className="md:hidden px-4">
+                <button
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                  className="p-1 rounded-full text-blue-900 hover:bg-gray-100 transition-colors"
                 >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M1 1h15M1 7h15M1 13h15"
-                  />
-                </svg>
+                  {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
+              </div>
+
+              {/* Mobile Navigation Menu */}
+              <div
+                className={cn(
+                  "fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden transition-opacity duration-300",
+                  mobileMenuOpen
+                    ? "opacity-100"
+                    : "opacity-0 pointer-events-none"
+                )}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <div
+                  className={cn(
+                    "fixed top-0 right-0 h-full w-3/4 max-w-sm bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out",
+                    mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+                  )}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <div className="flex flex-col h-full">
+                    <div className="p-4 border-b">
+                      <button
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="p-2 rounded-full text-blue-900 hover:bg-gray-100 transition-colors ml-auto block"
+                      >
+                        <X size={24} />
+                      </button>
+                    </div>
+
+                    <nav className="flex-1 overflow-y-auto p-4">
+                      <ul className="space-y-6 py-6">
+                        <MobileNavItem href="/" label="Home" active />
+                        <MobileNavItem href="/about" label="About" />
+                        <MobileNavItem href="/services" label="Services" />
+                        <MobileNavItem href="/outlets" label="Outlets" />
+                        <MobileNavItem href="/media" label="Media" />
+                        <MobileNavItem href="/careers" label="Careers" />
+                        <MobileNavItem href="/contact" label="Contact" />
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
               </div>
 
               <nav className="hidden lg:flex items-center text-xs space-x-6">
@@ -117,7 +152,6 @@ export default function Home() {
               <nav className="hidden md:flex flex-wrap justify-center font-semibold">
                 {[
                   "INTERNATIONAL",
-                  "HINKLEY POINT FAMILIES",
                   "YOUNG LEARNERS",
                   "PRE-GCSE",
                   "1 YEAR GCSE",
@@ -125,7 +159,6 @@ export default function Home() {
                   "PFY & IFY",
                   "IB",
                   "A-LEVELS",
-                  "BTEC",
                 ].map((item) => (
                   <Link
                     key={item}
@@ -137,7 +170,7 @@ export default function Home() {
                 ))}
               </nav>
               <nav className="md:hidden flex flex-wrap justify-center text-xs">
-                {["INTERNATIONAL", "HINKLEY POINT FAMILIES"].map((item) => (
+                {["INTERNATIONAL", "YOUNG LEARNERS", "A-LEVELS", "IB"].map((item) => (
                   <Link
                     key={item}
                     href="#"
@@ -161,7 +194,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#56a747]/80 via-[#56a747]/10 to-transparent"></div>
         </div>
 
-        <div className="container-custom relative z-10 px-20 mt-10">
+        <div className="container-custom relative z-10 md:px-20 px-4 mt-10">
           <div className="max-w-2xl text-white">
             <h2
               className={cn(
@@ -199,5 +232,28 @@ export default function Home() {
         </button>
       </section>
     </>
+  );
+}
+
+function MobileNavItem({
+  href,
+  label,
+  active = false,
+}: {
+  href: string;
+  label: string;
+  active?: boolean;
+}) {
+  return (
+    <li>
+      <Link
+        href={href}
+        className={`block text-lg font-medium transition-colors ${
+          active ? "text-[#56a747]" : "text-blue-900"
+        }`}
+      >
+        {label}
+      </Link>
+    </li>
   );
 }
